@@ -11,7 +11,7 @@
 # SPDX-License-Identifier: EPL-2.0                                                                *
 # *************************************************************************************************/
 
-PROJECT(KeypleCard C CXX)
+PROJECT(CalypsonetTerminalCard C CXX)
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
 SET(VERSION_MAJOR "0")
