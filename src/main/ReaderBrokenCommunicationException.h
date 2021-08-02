@@ -26,7 +26,7 @@ namespace card {
  *
  * @since 1.0
  */
-class ReaderBorkenCommunicationException final : public AbstractApduException {
+class ReaderBrokenCommunicationException final : public AbstractApduException {
 public:
     /**
      * Builds a new exception embedding card response data.

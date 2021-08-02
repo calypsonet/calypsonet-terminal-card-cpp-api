@@ -13,7 +13,7 @@
 
 #pragma once
 
-#include <iostream>
+#include <ostream>
 #include <memory>
 
 /* Calypsonet Terminal Card */
@@ -84,6 +84,40 @@ public:
      * @since 1.0
      */
     virtual const std::shared_ptr<CardResponseApi> getCardResponse() const = 0;
+
+    /**
+     *
+     */
+    friend std::ostream& operator<<(std::ostream& os,
+                                    const std::shared_ptr<CardSelectionResponseApi> csr)
+    {
+        os << "CARD_SELECTION_RESPONSE_API: {"
+           << "HAS_MATCHED: " << csr->hasMatched()
+           << "<TODO>"
+           << "}";
+
+        return os;
+    }
+
+    /**
+     *
+     */
+    friend std::ostream& operator<<(
+        std::ostream& os, const std::vector<std::shared_ptr<CardSelectionResponseApi>>& csrs)
+    {
+        os << "CARD_SELECTION_RESPONSE_APIS: {";
+
+        for (auto it = std::begin(csrs); it != std::end(csrs); ++it) {
+            os << *it;
+            if (it != csrs.end()) {
+                os << ", ";
+            }
+        }
+
+        os << "}";
+
+        return os;
+    }
 };
 
 }

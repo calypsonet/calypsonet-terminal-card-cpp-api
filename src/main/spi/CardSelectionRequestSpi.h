@@ -14,6 +14,7 @@
 #pragma once
 
 #include <memory>
+#include <ostream>
 
 /* Calypsonet Terminal Card */
 #include "CardRequestSpi.h"
@@ -50,6 +51,41 @@ public:
      * @since 1.0
      */
     virtual const std::shared_ptr<CardRequestSpi> getCardRequest() const = 0;
+
+    /**
+     *
+     */
+    friend std::ostream& operator<<(std::ostream& os,
+                                    const std::shared_ptr<CardSelectionRequestSpi> csr)
+    {
+        (void)csr;
+
+        os << "CARD_SELECTION_REQUEST_SPI: {"
+           << "<TODO>"
+           << "}";
+
+        return os;
+    }
+
+    /**
+     *
+     */
+    friend std::ostream& operator<<(
+        std::ostream& os, const std::vector<std::shared_ptr<CardSelectionRequestSpi>>& csrs)
+    {
+        os << "CARD_SELECTION_REQUEST_SPIS: {";
+
+        for (auto it = std::begin(csrs); it != std::end(csrs); ++it) {
+            os << *it;
+            if (it != csrs.end()) {
+                os << ", ";
+            }
+        }
+
+        os << "}";
+
+        return os;
+    }
 };
 
 }

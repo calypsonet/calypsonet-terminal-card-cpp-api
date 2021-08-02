@@ -15,12 +15,14 @@
 
 /* Calypsonet Terminal Card */
 #include "CardRequestSpi.h"
-#include "CardResponseSpi.h"
+#include "CardResponseApi.h"
 #include "ChannelControl.h"
 
 namespace calypsonet {
 namespace terminal {
 namespace card {
+
+using namespace calypsonet::terminal::card::spi;
 
 /**
  * Reader able to transmit card requests and having control over the physical channel.

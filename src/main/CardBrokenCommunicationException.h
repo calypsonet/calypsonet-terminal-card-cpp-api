@@ -52,11 +52,11 @@ public:
      * @param cause The cause
      * @since 1.0
      */
-    CardBorkenCommunicationException(const std::shared_ptr<CardResponseApi> cardResponseApi,
+    CardBrokenCommunicationException(const std::shared_ptr<CardResponseApi> cardResponseApi,
                                      const bool isCardResponseComplete,
                                      const std::string& message,
                                      const std::exception cause)
-    : AbstractApduException(cardResponse, isCardResponseComplete, message, cause) {}
+    : AbstractApduException(cardResponseApi, isCardResponseComplete, message, cause) {}
 };
 
 }

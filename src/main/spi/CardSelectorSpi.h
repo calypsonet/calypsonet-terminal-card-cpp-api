@@ -14,6 +14,7 @@
 #pragma once
 
 #include <cstdint>
+#include <ostream>
 #include <string>
 #include <vector>
 
@@ -67,18 +68,21 @@ public:
          * @since 1.0
          */
         FIRST,
+
         /**
          * Last occurrence.
          *
          * @since 1.0
          */
         LAST,
+
         /**
          * Next occurrence.
          *
          * @since 1.0
          */
         NEXT,
+
         /**
          * Previous occurrence.
          *
@@ -86,6 +90,27 @@ public:
          */
         PREVIOUS
     };
+
+    friend std::ostream& operator<<(std::ostream& os, const FileOccurrence fo)
+    {
+        switch (fo) {
+        case FileOccurrence::FIRST:
+            os << "FILE_OCCURRENCE = FIRST";
+            break;
+        case FileOccurrence::LAST:
+            os << "FILE_OCCURRENCE = LAST";
+            break;
+        case FileOccurrence::NEXT:
+            os << "FILE_OCCURRENCE = NEXT";
+            break;
+        case FileOccurrence::PREVIOUS:
+            os << "FILE_OCCURRENCE = PREVIOUS";
+            break;
+        }
+
+        return os;
+    }
+
 
     /**
      * Types of templates available in return for the Select Application command, according to the
@@ -100,18 +125,21 @@ public:
          * @since 1.0
          */
         FCI,
+
         /**
          * File control parameters.
          *
          * @since 1.0
          */
         FCP,
+
         /**
          * File management data.
          *
          * @since 1.0
          */
         FMD,
+
         /**
          * No response expected.
          *
@@ -119,6 +147,26 @@ public:
          */
         NO_RESPONSE
     };
+
+    friend std::ostream& operator<<(std::ostream& os, const FileControlInformation fci)
+    {
+        switch (fci) {
+        case FileControlInformation::FCI:
+            os << "FILE_CONTROL_INFORMATION = FCI";
+            break;
+        case FileControlInformation::FCP:
+            os << "FILE_CONTROL_INFORMATION = FCP";
+            break;
+        case FileControlInformation::FMD:
+            os << "FILE_CONTROL_INFORMATION = FMD";
+            break;
+        case FileControlInformation::NO_RESPONSE:
+            os << "FILE_CONTROL_INFORMATION = NO_RESPONSE";
+            break;
+        }
+
+        return os;
+    }
 
     /**
      * Gets the card protocol name.

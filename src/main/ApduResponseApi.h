@@ -14,7 +14,11 @@
 #pragma once
 
 #include <cstdint>
+#include <ostream>
 #include <vector>
+
+/* Keyple Core Util */
+#include "KeypleStd.h"
 
 namespace calypsonet {
 namespace terminal {
@@ -53,6 +57,38 @@ public:
      * @since 1.0
      */
     virtual int getStatusWord() const = 0;
+
+    /**
+     *
+     */
+    friend std::ostream& operator<<(std::ostream& os, const std::shared_ptr<ApduResponseApi> ara)
+    {
+        os << "APDU_RESPONSE_API: {"
+           << "APDU = " << ara->getApdu() << ", "
+           << "DATA_OUT = " << ara->getDataOut() << ", "
+           << "STATUS_WORD = " << ara->getStatusWord()
+           << "}";
+
+        return os;
+    }
+
+    /**
+     *
+     */
+    friend std::ostream& operator<<(std::ostream& os,
+                                    const std::vector<std::shared_ptr<ApduResponseApi>>& aras)
+    {
+        os << "APDU_RESPONSE_APIS: {";
+        for (auto it = aras.begin(); it != aras.end(); ++it)
+        {
+            if (it != aras.begin())
+                os << ", ";
+            os << *it;
+        }
+        os << "}";
+
+        return os;
+    }
 };
 
 }

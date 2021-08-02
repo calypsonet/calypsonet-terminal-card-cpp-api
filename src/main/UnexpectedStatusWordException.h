@@ -15,6 +15,7 @@
 
 /* Calypsonet Terminal Card */
 #include "AbstractApduException.h"
+#include "CardResponseApi.h"
 
 namespace calypsonet {
 namespace terminal {
@@ -37,26 +38,26 @@ public:
      * @param message Message to identify the exception context.
      * @since 1.0
      */
-    UnexpectedStatusWordException(const std::shared_ptr<CardResponse> cardResponse,
+    UnexpectedStatusWordException(const std::shared_ptr<CardResponseApi> cardResponseApi,
                                   const bool isCardResponseComplete,
                                   const std::string& message)
-    : AbstractApduException(cardResponse, isCardResponseComplete, message) {}
+    : AbstractApduException(cardResponseApi, isCardResponseComplete, message) {}
 
     /**
      * Builds a new exception embedding card response data with the originating exception.
      *
-     * @param cardResponse The card responses received so far.
+     * @param cardResponseApi The card responses received so far.
      * @param isCardResponseComplete True if the number responses equals the number of requests
      *        present in the original calypsonet::terminal::card::spi::CardRequestSpi.
      * @param message Message to identify the exception context.
      * @param cause The cause
      * @since 1.0
      */
-    UnexpectedStatusWordException(const std::shared_ptr<CardResponse> cardResponse,
+    UnexpectedStatusWordException(const std::shared_ptr<CardResponseApi> cardResponseApi,
                                   const bool isCardResponseComplete,
                                   const std::string& message,
                                   const std::exception cause)
-    : AbstractApduException(cardResponse, isCardResponseComplete, message, cause) {}
+    : AbstractApduException(cardResponseApi, isCardResponseComplete, message, cause) {}
 };
 
 }

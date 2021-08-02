@@ -14,10 +14,11 @@
 #pragma once
 
 #include <memory>
+#include <ostream>
 #include <vector>
 
 /* Calypsonet Terminal Card */
-#include "ApduResponsApi.h"
+#include "ApduResponseApi.h"
 
 namespace calypsonet {
 namespace terminal {
@@ -60,6 +61,19 @@ public:
      * @since 1.0
      */
     virtual bool isLogicalChannelOpen() const = 0;
+
+    /**
+     *
+     */
+    friend std::ostream& operator<<(std::ostream& os, const std::shared_ptr<CardResponseApi> cra)
+    {
+        os << "CARD_RESPONSE_API: {"
+           << "IS_LOGICAL_CHANNEL_OPEN = " << cra->isLogicalChannelOpen() << ", "
+           << cra->getApduResponses()
+           << "}";
+
+        return os;
+    }
 };
 
 }
