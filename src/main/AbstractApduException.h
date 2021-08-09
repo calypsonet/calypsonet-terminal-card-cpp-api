@@ -65,7 +65,7 @@ public:
     AbstractApduException(const std::shared_ptr<CardResponseApi> cardResponseApi,
                           const bool isCardResponseComplete,
                           const std::string& message,
-                          const std::exception cause)
+                          const std::shared_ptr<Exception> cause)
     : Exception(message, cause),
       mCardResponseApi(cardResponseApi),
       mIsCardResponseComplete(isCardResponseComplete) {}

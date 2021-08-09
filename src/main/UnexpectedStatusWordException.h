@@ -56,7 +56,7 @@ public:
     UnexpectedStatusWordException(const std::shared_ptr<CardResponseApi> cardResponseApi,
                                   const bool isCardResponseComplete,
                                   const std::string& message,
-                                  const std::exception cause)
+                                  const std::shared_ptr<Exception> cause)
     : AbstractApduException(cardResponseApi, isCardResponseComplete, message, cause) {}
 };
 

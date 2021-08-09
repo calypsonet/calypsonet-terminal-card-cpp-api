@@ -1,6 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2021 Calypso Networks Association                                                *
- * https://www.calypsonet-asso.org/                                                               *
+ * Copyright (c) 2021 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
  * See the NOTICE file(s) distributed with this work for additional information regarding         *
  * copyright ownership.                                                                           *
@@ -55,7 +54,7 @@ public:
     ReaderBrokenCommunicationException(const std::shared_ptr<CardResponseApi> cardResponseApi,
                                        const bool isCardResponseComplete,
                                        const std::string& message,
-                                       const std::exception cause)
+                                       const std::shared_ptr<Exception> cause)
     : AbstractApduException(cardResponseApi, isCardResponseComplete, message, cause) {}
 };
 
