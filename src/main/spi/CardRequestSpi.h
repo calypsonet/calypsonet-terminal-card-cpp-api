@@ -1,6 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2021 Calypso Networks Association                                                *
- * https://www.calypsonet-asso.org/                                                               *
+ * Copyright (c) 2021 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
  * See the NOTICE file(s) distributed with this work for additional information regarding         *
  * copyright ownership.                                                                           *
@@ -35,6 +34,11 @@ namespace spi {
  */
 class CardRequestSpi {
 public:
+    /**
+     * 
+     */
+    virtual ~CardRequestSpi() = default;
+    
     /**
      * Gets the list of calypsonet::terminal::card::spi::ApduRequestSpi.
      *

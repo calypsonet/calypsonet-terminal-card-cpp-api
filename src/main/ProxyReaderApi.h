@@ -1,6 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2021 Calypso Networks Association                                                *
- * https://www.calypsonet-asso.org/                                                               *
+ * Copyright (c) 2021 Calypso Networks Association https://www.calypsonet-asso.org/               *
  *                                                                                                *
  * See the NOTICE file(s) distributed with this work for additional information regarding         *
  * copyright ownership.                                                                           *
@@ -38,6 +37,11 @@ using namespace calypsonet::terminal::card::spi;
  */
 class ProxyReaderApi {
 public:
+    /**
+     * 
+     */
+    virtual ~ProxyReaderApi() = default;
+    
     /**
      * Transmits a calypsonet::terminal::card::CardRequestSpi, applies the provided
      * calypsonet::terminal::card::ChannelControl policy and returns a
