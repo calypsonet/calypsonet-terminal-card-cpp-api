@@ -14,8 +14,8 @@
 PROJECT(CalypsonetTerminalCard C CXX)
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
-SET(VERSION_MAJOR "0")
-SET(VERSION_MINOR "1")
+SET(VERSION_MAJOR "1")
+SET(VERSION_MINOR "0")
 SET(VERSION_PATCH "0")
 
 SET(VERSION "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}")
@@ -31,8 +31,8 @@ SET(EXECTUABLE_NAME keypleterminalcard_ut)
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ")
 
-SET(KEYPLE_UTIL_DIR        "../../../github.com.calypsonet.keyple-cpp-util")
-SET(KEYPLE_UTIL_LIB        "keypleutil")
+SET(KEYPLE_UTIL_DIR        "../../../github.com.calypsonet.keyple-util-cpp-lib")
+SET(KEYPLE_UTIL_LIB        "keypleutilcpplib")
 
 INCLUDE_DIRECTORIES(
     ${CMAKE_CURRENT_SOURCE_DIR}
