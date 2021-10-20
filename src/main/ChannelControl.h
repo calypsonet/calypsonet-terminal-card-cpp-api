@@ -19,13 +19,13 @@ namespace card {
 /**
  * Policy for managing the physical channel after a card request is executed.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 enum class ChannelControl {
     /**
      * Leaves the physical channel open.
      *
-     * @since 1.0
+     * @since 1.0.0
      */
     KEEP_OPEN,
 
@@ -34,7 +34,7 @@ enum class ChannelControl {
      * The physical channel closes instantly or a card removal sequence is initiated depending on
      * the observation mode.
      *
-     * @since 1.0
+     * @since 1.0.0
      */
     CLOSE_AFTER
 };

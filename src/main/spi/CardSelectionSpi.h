@@ -33,7 +33,7 @@ namespace spi {
  *
  * <p>An adapter of this interface must also implement <b>CardSelection</b>.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class CardSelectionSpi {
 public:
@@ -41,7 +41,7 @@ public:
      * Gets the card selection request containing the selection data prepared for this selection.
      *
      * @return A not null reference.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::shared_ptr<CardSelectionRequestSpi> getCardSelectionRequest() const = 0;
 
@@ -52,7 +52,7 @@ public:
      * @param cardSelectionResponseApi The card selection response.
      * @return A not null reference.
      * @throw ParseException If the card selection response parsing failed.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::shared_ptr<SmartCardSpi> parse(
         const std::shared_ptr<CardSelectionResponseApi> cardSelectionResponseApi) const = 0;

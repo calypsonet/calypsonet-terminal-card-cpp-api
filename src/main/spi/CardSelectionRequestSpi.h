@@ -32,7 +32,7 @@ namespace spi {
  * executed after the card selection when successful.
  *
  * @see calypsonet::terminal::card::CardSelectionResponseApi
- * @since 1.0
+ * @since 1.0.0
  */
 class CardSelectionRequestSpi {
 public:
@@ -40,7 +40,7 @@ public:
      * Gets the card selector.
      *
      * @return A not null reference.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::shared_ptr<CardSelectorSpi> getCardSelector() const = 0;
 
@@ -48,7 +48,7 @@ public:
      * Gets the card request.
      *
      * @return Null if no card request has been defined.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::shared_ptr<CardRequestSpi> getCardRequest() const = 0;
 

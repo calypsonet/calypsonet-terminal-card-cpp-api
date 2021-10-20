@@ -1,6 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2021 Calypso Networks Association                                                *
- * https://www.calypsonet-asso.org/                                                               *
+ * Copyright (c) 2021 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
  * See the NOTICE file(s) distributed with this work for additional information regarding         *
  * copyright ownership.                                                                           *
@@ -25,7 +24,7 @@ namespace card {
  * Exception carrying response data received from the card until an unexpected APDU status word is
  * received.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class UnexpectedStatusWordException final : public AbstractApduException {
 public:
@@ -36,7 +35,7 @@ public:
      * @param isCardResponseComplete True if the number responses equals the number of requests
      *        present in the original calypsonet::terminal::card::spi::CardRequestSpi.
      * @param message Message to identify the exception context.
-     * @since 1.0
+     * @since 1.0.0
      */
     UnexpectedStatusWordException(const std::shared_ptr<CardResponseApi> cardResponseApi,
                                   const bool isCardResponseComplete,
@@ -51,7 +50,7 @@ public:
      *        present in the original calypsonet::terminal::card::spi::CardRequestSpi.
      * @param message Message to identify the exception context.
      * @param cause The cause
-     * @since 1.0
+     * @since 1.0.0
      */
     UnexpectedStatusWordException(const std::shared_ptr<CardResponseApi> cardResponseApi,
                                   const bool isCardResponseComplete,

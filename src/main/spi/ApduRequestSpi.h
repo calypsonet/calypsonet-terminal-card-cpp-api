@@ -1,6 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2021 Calypso Networks Association                                                *
- * https://www.calypsonet-asso.org/                                                               *
+ * Copyright (c) 2021 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
  * See the NOTICE file(s) distributed with this work for additional information regarding         *
  * copyright ownership.                                                                           *
@@ -26,7 +25,7 @@ namespace spi {
  * Data to build a single APDU command to be sent to a card.
  *
  * @see org.calypsonet.terminal.card.ApduResponseApi
- * @since 1.0
+ * @since 1.0.0
  */
 class ApduRequestSpi {
 public:
@@ -34,7 +33,7 @@ public:
      * Gets the APDU bytes to be sent to the card.
      *
      * @return A array of at least 4 bytes.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::vector<uint8_t>& getApdu() const = 0;
 
@@ -42,7 +41,7 @@ public:
      * Gets the list of status words that must be considered successful for the APDU.
      *
      * @return A set of integer values containing at least 9000h.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::vector<int>& getSuccessfulStatusWords() const = 0;
 
@@ -52,7 +51,7 @@ public:
      * <p>These information are intended to improve the logging.
      *
      * @return Null if no information has been defined.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::string& getInfo() const = 0;
 };

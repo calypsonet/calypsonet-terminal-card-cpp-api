@@ -32,7 +32,7 @@ using namespace keyple::core::util::cpp::exception;
  * Generic exception carrying response data received from the card until a communication failure
  * occurs or an unexpected APDU status code is received.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class AbstractApduException : public Exception {
 public:
@@ -43,7 +43,7 @@ public:
      * @param isCardResponseComplete True if the number responses equals the number of requests
      *        present in the original calypsonet::terminal::card::spi::CardRequestSpi.
      * @param message The message to identify the exception context.
-     * @since 1.0
+     * @since 1.0.0
      */
     AbstractApduException(const std::shared_ptr<CardResponseApi> cardResponseApi,
                           const bool isCardResponseComplete,
@@ -60,7 +60,7 @@ public:
      *        present in the original calypsonet::terminal::card::spi::CardRequestSpi.
      * @param message Message to identify the exception context.
      * @param cause The cause
-     * @since 1.0
+     * @since 1.0.0
      */
     AbstractApduException(const std::shared_ptr<CardResponseApi> cardResponseApi,
                           const bool isCardResponseComplete,
@@ -74,7 +74,7 @@ public:
      * Gets the response data received so far.
      *
      * @return A not null reference.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::shared_ptr<CardResponseApi> getCardResponse() const final
     {
@@ -86,7 +86,7 @@ public:
      * calypsonet::terminal::card::spi::CardRequestSpi have been received.
      *
      * @return True if all expected responses have been received.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual bool isCardResponseComplete() const final
     {

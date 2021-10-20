@@ -30,7 +30,7 @@ namespace card {
  * been executed afterwards.
  *
  * @see org::calypsonet.terminal.card.spi.CardSelectionRequestSpi
- * @since 1.0
+ * @since 1.0.0
  */
 class CardSelectionResponseApi {
 public:
@@ -53,7 +53,7 @@ public:
      * format which can be either a hexadecimal string or any other relevant information.
      *
      * @return Null if no power-on data is available.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::string& getPowerOnData() const = 0;
 
@@ -62,7 +62,7 @@ public:
      * the <b>Select Application</b> command.
      *
      * @return Null if no Select Application command was performed.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::shared_ptr<ApduResponseApi> getSelectApplicationResponse() const = 0;
 
@@ -70,7 +70,7 @@ public:
      * Gives the selection process status.
      *
      * @return True if the card inserted matches the selection filters.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual bool hasMatched() const = 0;
 
@@ -80,7 +80,7 @@ public:
      * calypsonet::terminal::card::spi::CardSelectionRequestSpi.
      *
      * @return Null if no requests have been set.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::shared_ptr<CardResponseApi> getCardResponse() const = 0;
 

@@ -21,14 +21,14 @@ namespace card {
 /**
  * API properties
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class CardApiProperties final {
 public:
     /**
      * API version: {@value}
      *
-     * @since 1.0
+     * @since 1.0.0
      */
     static const std::string VERSION;
 

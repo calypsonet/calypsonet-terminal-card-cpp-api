@@ -41,7 +41,7 @@ namespace card {
  * calypsonet::terminal::card::spi::CardRequestSpi::stopOnUnsuccessfulStatusWord()).
  *
  * @see calypsonet::terminal::card::spi::CardRequestSpi
- * @since 1.0
+ * @since 1.0.0
  */
 class CardResponseApi {
 public:
@@ -49,7 +49,7 @@ public:
      * Gets a list of all responses received to the executed APDU requests.
      *
      * @return A not null list, empty if there is no response.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::vector<std::shared_ptr<ApduResponseApi>>& getApduResponses() const = 0;
 
@@ -57,7 +57,7 @@ public:
      * Gets the state of the logical channel following the execution of the request.
      *
      * @return True if the logical channel is open.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual bool isLogicalChannelOpen() const = 0;
 

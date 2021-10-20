@@ -23,7 +23,7 @@ namespace card {
  * Exception carrying response data received from the card until a communication failure with the
  * card occurs.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class CardBrokenCommunicationException final : public AbstractApduException {
 public:
@@ -34,7 +34,7 @@ public:
      * @param isCardResponseComplete True if the number responses equals the number of requests
      *        present in the original calypsonet::terminal::card::spi::CardRequestSpi.
      * @param message Message to identify the exception context.
-     * @since 1.0
+     * @since 1.0.0
      */
     CardBrokenCommunicationException(const std::shared_ptr<CardResponseApi> cardResponseApi,
                                      const bool isCardResponseComplete,
@@ -49,7 +49,7 @@ public:
      *        present in the original calypsonet::terminal::card::spi::CardRequestSpi.
      * @param message Message to identify the exception context.
      * @param cause The cause
-     * @since 1.0
+     * @since 1.0.0
      */
     CardBrokenCommunicationException(const std::shared_ptr<CardResponseApi> cardResponseApi,
                                      const bool isCardResponseComplete,

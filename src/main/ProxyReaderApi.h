@@ -33,7 +33,7 @@ using namespace calypsonet::terminal::card::spi;
  *
  * <p>To use this API, simply cast a <b>CardReader</b> as a <b>ProxyReaderApi</b>.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class ProxyReaderApi {
 public:
@@ -68,7 +68,7 @@ public:
      * @throw CardBrokenCommunicationException If the communication with the card has failed.
      * @throw UnexpectedStatusWordException If any of the APDUs returned an unexpected status word
      *        and the card request specified the need to check them.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::shared_ptr<CardResponseApi> transmitCardRequest(
         const std::shared_ptr<CardRequestSpi> cardRequest,
@@ -78,7 +78,7 @@ public:
      * Releases the communication channel previously established with the card.
      *
      * @throw ReaderBrokenCommunicationException If the communication with the reader has failed.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual void releaseChannel() = 0;
 };

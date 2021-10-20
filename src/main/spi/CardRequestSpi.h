@@ -30,7 +30,7 @@ namespace spi {
  * to stop processing in case of an unexpected status word in response to one of the APDUs.
  *
  * @see calypsonet::terminal::card::ApduResponseApi
- * @since 1.0
+ * @since 1.0.0
  */
 class CardRequestSpi {
 public:
@@ -43,7 +43,7 @@ public:
      * Gets the list of calypsonet::terminal::card::spi::ApduRequestSpi.
      *
      * @return A not empty list.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual const std::vector<std::shared_ptr<ApduRequestSpi>> getApduRequests() const = 0;
 
@@ -52,7 +52,7 @@ public:
      * received.
      *
      * @return True if the process must stop at the first unsuccessful status word received.
-     * @since 1.0
+     * @since 1.0.0
      */
     virtual bool stopOnUnsuccessfulStatusWord() = 0;
 };
