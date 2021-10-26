@@ -46,6 +46,11 @@ namespace card {
 class CardResponseApi {
 public:
     /**
+     * 
+     */
+    virtual ~CardResponseApi() = default;
+    
+    /**
      * Gets a list of all responses received to the executed APDU requests.
      *
      * @return A not null list, empty if there is no response.
