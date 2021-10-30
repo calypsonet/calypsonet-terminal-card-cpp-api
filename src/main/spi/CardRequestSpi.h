@@ -45,7 +45,7 @@ public:
      * @return A not empty list.
      * @since 1.0.0
      */
-    virtual const std::vector<std::shared_ptr<ApduRequestSpi>> getApduRequests() const = 0;
+    virtual const std::vector<std::shared_ptr<ApduRequestSpi>>& getApduRequests() const = 0;
 
     /**
      * Indicates if the processing of the requests must stop when an unexpected status word is
@@ -54,7 +54,7 @@ public:
      * @return True if the process must stop at the first unsuccessful status word received.
      * @since 1.0.0
      */
-    virtual bool stopOnUnsuccessfulStatusWord() = 0;
+    virtual bool stopOnUnsuccessfulStatusWord() const = 0;
 };
 
 }

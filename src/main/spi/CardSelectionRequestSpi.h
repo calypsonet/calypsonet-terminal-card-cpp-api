@@ -1,6 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2021 Calypso Networks Association                                                *
- * https://www.calypsonet-asso.org/                                                               *
+ * Copyright (c) 2021 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
  * See the NOTICE file(s) distributed with this work for additional information regarding         *
  * copyright ownership.                                                                           *
@@ -42,7 +41,7 @@ public:
      * @return A not null reference.
      * @since 1.0.0
      */
-    virtual const std::shared_ptr<CardSelectorSpi> getCardSelector() const = 0;
+    virtual std::shared_ptr<CardSelectorSpi> getCardSelector() const = 0;
 
     /**
      * Gets the card request.
@@ -50,7 +49,7 @@ public:
      * @return Null if no card request has been defined.
      * @since 1.0.0
      */
-    virtual const std::shared_ptr<CardRequestSpi> getCardRequest() const = 0;
+    virtual std::shared_ptr<CardRequestSpi> getCardRequest() const = 0;
 
     /**
      *

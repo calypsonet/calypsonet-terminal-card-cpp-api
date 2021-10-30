@@ -43,7 +43,7 @@ public:
      * @return A not null reference.
      * @since 1.0.0
      */
-    virtual const std::shared_ptr<CardSelectionRequestSpi> getCardSelectionRequest() const = 0;
+    virtual std::shared_ptr<CardSelectionRequestSpi> getCardSelectionRequest() const = 0;
 
     /**
      * Analyzes the response received from the card during the selection process and creates a
@@ -54,7 +54,7 @@ public:
      * @throw ParseException If the card selection response parsing failed.
      * @since 1.0.0
      */
-    virtual const std::shared_ptr<SmartCardSpi> parse(
+    virtual std::shared_ptr<SmartCardSpi> parse(
         const std::shared_ptr<CardSelectionResponseApi> cardSelectionResponseApi) const = 0;
 };
 
