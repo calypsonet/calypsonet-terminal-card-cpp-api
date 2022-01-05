@@ -26,13 +26,7 @@ namespace spi {
  *
  * @since 1.0.0
  */
-class SmartCardSpi {
-public:
-    /**
-     * 
-     */
-    virtual ~SmartCardSpi() = default;
-};
+class SmartCardSpi {};
 
 }
 }
