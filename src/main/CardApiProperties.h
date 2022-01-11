@@ -23,23 +23,24 @@ namespace card {
  *
  * @since 1.0.0
  */
-class CardApiProperties final {
-public:
-    /**
-     * API version: {@value}
-     *
-     * @since 1.0.0
-     */
-    static const std::string VERSION;
+// class CardApiProperties final {
+// public:
+//     /**
+//      * API version: {@value}
+//      *
+//      * @since 1.0.0
+//      */
+//     static const std::string VERSION;
 
-private:
-    /**
-     * Private constructor
-     */
-    CardApiProperties() {}
-};
+// private:
+//     /**
+//      * Private constructor
+//      */
+//     CardApiProperties() {}
+// };
 
-const std::string CardApiProperties::VERSION = "1.0";
+// const std::string CardApiProperties::VERSION = "1.0";
+static const std::string CardApiProperties_VERSION = "1.0";
 
 }
 }
