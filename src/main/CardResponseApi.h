@@ -46,10 +46,10 @@ namespace card {
 class CardResponseApi {
 public:
     /**
-     * 
+     *
      */
     virtual ~CardResponseApi() = default;
-    
+
     /**
      * Gets a list of all responses received to the executed APDU requests.
      *
@@ -71,10 +71,17 @@ public:
      */
     friend std::ostream& operator<<(std::ostream& os, const std::shared_ptr<CardResponseApi> cra)
     {
-        os << "CARD_RESPONSE_API: {"
-           << "IS_LOGICAL_CHANNEL_OPEN = " << cra->isLogicalChannelOpen() << ", "
-           << cra->getApduResponses()
-           << "}";
+        os << "CARD_RESPONSE_API: {";
+
+        if (cra == nullptr) {
+            os << "null";
+        } else {
+            os << "CARD_RESPONSE_API: {"
+               << "IS_LOGICAL_CHANNEL_OPEN = " << cra->isLogicalChannelOpen() << ", "
+               << "APDU_RESPONSES = {" << cra->getApduResponses() << "}";
+        }
+
+        os << "}";
 
         return os;
     }
