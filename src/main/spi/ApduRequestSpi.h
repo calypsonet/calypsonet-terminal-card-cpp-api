@@ -13,8 +13,13 @@
 #pragma once
 
 #include <cstdint>
+#include <memory>
+#include <ostream>
 #include <string>
 #include <vector>
+
+/* Keyple Core Util */
+#include "KeypleStd.h"
 
 namespace calypsonet {
 namespace terminal {
@@ -54,6 +59,54 @@ public:
      * @since 1.0.0
      */
     virtual const std::string& getInfo() const = 0;
+
+    /**
+     *
+     */
+    friend std::ostream& operator<<(std::ostream& os, const ApduRequestSpi& ars)
+    {
+        os << "APDU_REQUEST_SPI: {"
+           << "APDU: " << ars.getApdu() << ", "
+           << "SUCCESSFUL_STATUS_WORDS: " << ars.getSuccessfulStatusWords() << ", "
+           << "INFO: " << ars.getInfo()
+           << "}";
+
+        return os;
+    }
+
+    /**
+     *
+     */
+    friend std::ostream& operator<<(std::ostream& os, const std::shared_ptr<ApduRequestSpi> ars)
+    {
+        if (ars == nullptr) {
+            os << "APDU_REQUEST_SPI: null";
+        } else {
+            os << *ars.get();
+        }
+
+        return os;
+    }
+
+    /**
+     *
+     */
+    friend std::ostream& operator<<(std::ostream& os,
+                                    const std::vector<std::shared_ptr<ApduRequestSpi>>& ars)
+    {
+        os << "APDU_REQUEST_SPIS: {";
+
+        for (auto it = ars.begin(); it != ars.end(); it++) {
+            if (it != ars.begin()) {
+                os << ", ";
+            }
+            os << *it;
+        }
+
+        os << "}";
+
+        return os;
+    }
 };
 
 }

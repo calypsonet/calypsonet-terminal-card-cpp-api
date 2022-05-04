@@ -189,7 +189,7 @@ public:
      * @return Null if no AID has been set.
      * @since 1.0.0
      */
-    virtual const std::vector<uint8_t> getAid() const = 0;
+    virtual const std::vector<uint8_t>& getAid() const = 0;
 
     /**
      * Gets the FileOccurrence parameter defining the navigation within the card applications
@@ -201,7 +201,7 @@ public:
     virtual FileOccurrence getFileOccurrence() const = 0;
 
     /**
-     * Gets the {@link FileControlInformation} parameter defining the output type of the select
+     * Gets the FileControlInformation parameter defining the output type of the select
      * command.
      *
      * @return A not null reference.
