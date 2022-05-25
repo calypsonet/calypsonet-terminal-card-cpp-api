@@ -1,0 +1,10 @@
+<map id="/github/workspace/src/main/CardResponseApi.h" name="/github/workspace/src/main/CardResponseApi.h">
+<area shape="rect" id="node1" title=" " alt="" coords="614,5,786,47"/>
+<area shape="rect" id="node2" href="$_abstract_apdu_exception_8h.html" title=" " alt="" coords="327,102,529,143"/>
+<area shape="rect" id="node5" href="$_unexpected_status_word_exception_8h.html" title=" " alt="" coords="501,206,763,247"/>
+<area shape="rect" id="node6" href="$_card_selection_response_api_8h.html" title=" " alt="" coords="669,95,867,151"/>
+<area shape="rect" id="node8" href="$_proxy_reader_api_8h.html" title=" " alt="" coords="891,102,1051,143"/>
+<area shape="rect" id="node3" href="$_card_broken_communication_exception_8h.html" title=" " alt="" coords="5,199,221,255"/>
+<area shape="rect" id="node4" href="$_reader_broken_communication_exception_8h.html" title=" " alt="" coords="246,199,477,255"/>
+<area shape="rect" id="node7" href="$_card_selection_spi_8h.html" title=" " alt="" coords="787,206,976,247"/>
+</map>
