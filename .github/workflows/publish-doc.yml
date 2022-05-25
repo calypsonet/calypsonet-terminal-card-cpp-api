@@ -18,7 +18,7 @@ jobs:
         run: chmod +x ./.github/scripts/*.sh
       - name: Check version
         working-directory: .
-        run: ./.github/scripts/check_version.sh
+        run: ./.github/scripts/check_version.sh 1.0.0
       - name: Patch Doxyfile
         working-directory: .
         run: ./.github/scripts/patch_doxyfile.sh
@@ -29,7 +29,7 @@ jobs:
           doxyfile-path: ./Doxyfile
       - name: Prepare Doxygen doc page locally
         working-directory: .
-        run: ./.github/scripts/prepare_doxygen.sh
+        run: ./.github/scripts/prepare_doxygen.sh 1.0.0
       - name: Deploy Doxygen documentation to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
