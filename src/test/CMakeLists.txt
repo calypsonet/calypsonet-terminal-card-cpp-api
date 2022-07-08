@@ -13,16 +13,10 @@
 
 SET(EXECTUABLE_NAME keypleterminalcard_ut)
 
-SET(KEYPLE_UTIL_DIR        "../../../keyple-util-cpp-lib")
-SET(KEYPLE_UTIL_LIB        "keypleutilcpplib")
-
 INCLUDE_DIRECTORIES(
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}/../main
     ${CMAKE_CURRENT_SOURCE_DIR}/../main/spi
-
-    ${KEYPLE_UTIL_DIR}/src/main
-    ${KEYPLE_UTIL_DIR}/src/main/cpp
 )
 
 ADD_EXECUTABLE(
@@ -36,4 +30,4 @@ ADD_EXECUTABLE(
 SET(GOOGLETEST_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 INCLUDE(CMakeLists.txt.googletest)
 
-TARGET_LINK_LIBRARIES(${EXECTUABLE_NAME} gtest gmock ${KEYPLE_UTIL_LIB})
+TARGET_LINK_LIBRARIES(${EXECTUABLE_NAME} gtest gmock Keyple::Util)
