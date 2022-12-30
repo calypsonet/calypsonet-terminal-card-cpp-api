@@ -1,13 +1,14 @@
-name: Publish API documentation
+name: Publish API documentation (snapshot)
 
 on:
   push:
     branches:
       - main
+      - master
       - doxygen
 
 jobs:
-  publish-doc:
+  publish-doc-snapshot:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code from ${{ github.repository }}/${{ github.ref }}
@@ -16,9 +17,6 @@ jobs:
           fetch-depth: 0
       - name: Make scripts executable
         run: chmod +x ./.github/scripts/*.sh
-      - name: Check version
-        working-directory: .
-        run: ./.github/scripts/check_version.sh
       - name: Patch Doxyfile
         working-directory: .
         run: ./.github/scripts/patch_doxyfile.sh
