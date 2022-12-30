@@ -1,5 +1,5 @@
 /**************************************************************************************************
- * Copyright (c) 2021 Calypso Networks Association https://calypsonet.org/                        *
+ * Copyright (c) 2022 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
  * See the NOTICE file(s) distributed with this work for additional information regarding         *
  * copyright ownership.                                                                           *
@@ -40,7 +40,7 @@ public:
      * @return A array of at least 4 bytes.
      * @since 1.0.0
      */
-    virtual const std::vector<uint8_t>& getApdu() const = 0;
+    virtual std::vector<uint8_t>& getApdu() = 0;
 
     /**
      * Gets the list of status words that must be considered successful for the APDU.
@@ -63,7 +63,7 @@ public:
     /**
      *
      */
-    friend std::ostream& operator<<(std::ostream& os, const ApduRequestSpi& ars)
+    friend std::ostream& operator<<(std::ostream& os, ApduRequestSpi& ars)
     {
         os << "APDU_REQUEST_SPI: {"
            << "APDU: " << ars.getApdu() << ", "
