@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['readerbrokencommunicationexception_0',['ReaderBrokenCommunicationException',['../classcalypsonet_1_1terminal_1_1card_1_1_reader_broken_communication_exception.html#a17b89878d14b3be3727000af439435f9',1,'calypsonet::terminal::card::ReaderBrokenCommunicationException::ReaderBrokenCommunicationException(const std::shared_ptr&lt; CardResponseApi &gt; cardResponseApi, const bool isCardResponseComplete, const std::string &amp;message)'],['../classcalypsonet_1_1terminal_1_1card_1_1_reader_broken_communication_exception.html#a0c1034ad81b89a223e0175875cb2abbe',1,'calypsonet::terminal::card::ReaderBrokenCommunicationException::ReaderBrokenCommunicationException(const std::shared_ptr&lt; CardResponseApi &gt; cardResponseApi, const bool isCardResponseComplete, const std::string &amp;message, const std::shared_ptr&lt; Exception &gt; cause)']]],
+  ['releasechannel_1',['releaseChannel',['../classcalypsonet_1_1terminal_1_1card_1_1_proxy_reader_api.html#a649309dce56cfeb0c98603c5bbaf5912',1,'calypsonet::terminal::card::ProxyReaderApi']]]
+];

@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['cardbrokencommunicationexception_0',['CardBrokenCommunicationException',['../classcalypsonet_1_1terminal_1_1card_1_1_card_broken_communication_exception.html#a759e99071769adb3edf38b31a965beda',1,'calypsonet::terminal::card::CardBrokenCommunicationException::CardBrokenCommunicationException(const std::shared_ptr&lt; CardResponseApi &gt; cardResponseApi, const bool isCardResponseComplete, const std::string &amp;message)'],['../classcalypsonet_1_1terminal_1_1card_1_1_card_broken_communication_exception.html#aa9ca34985eea49d60b76df823f018fcb',1,'calypsonet::terminal::card::CardBrokenCommunicationException::CardBrokenCommunicationException(const std::shared_ptr&lt; CardResponseApi &gt; cardResponseApi, const bool isCardResponseComplete, const std::string &amp;message, const std::shared_ptr&lt; Exception &gt; cause)']]]
+];
