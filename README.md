@@ -5,4 +5,4 @@ The new code is managed by the [Eclipse Keypop](https://keypop.org/) project and
 
 API documentation & class diagram is available online: [calypsonet.github.io/calypsonet-terminal-card-cpp-api](https://calypsonet.github.io/calypsonet-terminal-card-cpp-api)
 
-More information can be found on [calypsonet.org](http://calypsonet.org).
+More information can be found on the [CNA Terminal API website](https://terminal-api.calypsonet.org/).
